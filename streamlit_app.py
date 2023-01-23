@@ -26,7 +26,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 
-
 #create a repeatable code block called function
 #import requests
 def get_fruityvice_data(this_fruit_choice):
@@ -52,8 +51,6 @@ except URLerror as e:
   streamlit.error
 
 
-
-
 streamlit.header("The fruit load list contains:")
 #snowflake related functions
 def get_fruit_load_list():
@@ -73,7 +70,7 @@ if streamlit.button('get_fruit_load_list'):
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
         my_cur.execute("insert into fruit_load_list values ('from streamlit')")
-        retrun "Thanks for adding " +  new_fruit
+        return "Thanks for adding " +  new_fruit
         
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 if streamlit.button('Add a fruit to the list'):

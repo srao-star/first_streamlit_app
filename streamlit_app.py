@@ -29,7 +29,7 @@ streamlit.dataframe(fruits_to_show)
 
 #create a repeatable code block called function
 #import requests
-def get_fruityvice_data(this_fruit_choice)
+def get_fruityvice_data(this_fruit_choice):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
 # streamlit.text(fruityvice_response.json()) # just writes the data to the screen
 # takes the json and normalizes it
